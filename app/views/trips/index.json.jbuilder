@@ -1,4 +1,3 @@
-json.array!(@trips) do |trip|
-  json.extract! trip, :name, :location, :from_date, :to_date
-  json.url trip_url(trip, format: :json)
+json.trips(@trips) do |trip|
+  json.partial! trip
 end
