@@ -44,3 +44,4 @@ end
 gem 'less-rails'
 gem 'slim'
 gem 'high_voltage'
+gem 'active_model_serializers'
