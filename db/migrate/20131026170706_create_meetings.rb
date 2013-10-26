@@ -4,7 +4,7 @@ class CreateMeetings < ActiveRecord::Migration
       t.references :trip
       t.references :friend
       t.string :location
-      t.string :times
+      t.string :timeslots
 
       t.timestamps
     end

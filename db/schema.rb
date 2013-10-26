@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20131026170706) do
     t.integer  "trip_id"
     t.integer  "friend_id"
     t.string   "location"
-    t.string   "times"
+    t.string   "timeslots"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
