@@ -40,6 +40,6 @@ class TripsController < ApplicationController
 
   def trip_params
     params[:friends_attributes] = params[:friends]
-    params.permit(:name, :location, :from_date, :to_date, friends_attributes: [ :name, emails: [], phones: [] ])
+    params.permit(:name, :location, :from, :to, friends_attributes: [ :name, emails: [], phones: [] ])
   end
 end

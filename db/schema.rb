@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20131026170706) do
   create_table "trips", force: true do |t|
     t.string   "name"
     t.string   "location"
-    t.date     "from_date"
-    t.date     "to_date"
+    t.datetime "from"
+    t.datetime "to"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
