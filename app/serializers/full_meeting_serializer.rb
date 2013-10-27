@@ -1,4 +1,6 @@
 class FullMeetingSerializer < ActiveModel::Serializer
-  attributes :id, :location, :timeslots
+  attributes :id, :timeslots
   has_one :trip
+  has_one :location
+  has_many :recommendations
 end

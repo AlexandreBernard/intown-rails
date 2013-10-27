@@ -1,4 +1,5 @@
 class MeetingSerializer < ActiveModel::Serializer
-  attributes :id, :location, :timeslots
-  has_one :friend
+  attributes :id, :timeslots
+  has_one :friend, :location
+  has_many :recommendations
 end
