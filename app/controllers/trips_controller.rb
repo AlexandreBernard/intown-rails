@@ -10,20 +10,20 @@ class TripsController < ApplicationController
 
   # GET /trips/1.json
   def show
-    respond_with(@trip)
+    respond_with(@trip, serializer: FullTripSerializer)
   end
 
   # POST /trips.json
   def create
     @trip = Trip.new(trip_params)
     @trip.save
-    respond_with(@trip)
+    respond_with(@trip, serializer: FullTripSerializer)
   end
 
   # PATCH/PUT /trips/1.json
   def update
     @trip.update(trip_params)
-    respond_with(@trip)
+    respond_with(@trip, serializer: FullTripSerializer)
   end
 
   # DELETE /trips/1.json
