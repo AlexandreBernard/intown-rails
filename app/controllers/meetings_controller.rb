@@ -10,20 +10,20 @@ class MeetingsController < ApplicationController
 
   # GET /meetings/1.json
   def show
-    respond_with(@meeting)
+    respond_with(@meeting, serializer: FullMeetingSerializer)
   end
 
   # POST /meetings.json
   def create
     @meeting = Meeting.new(meeting_params)
     @meeting.save
-    respond_with(@meeting)
+    respond_with(@meeting, serializer: FullMeetingSerializer)
   end
 
   # PATCH/PUT /meetings/1.json
   def update
     @meeting.update(meeting_params)
-    respond_with(@meeting)
+    respond_with(@meeting, serializer: FullMeetingSerializer)
   end
 
   # DELETE /meetings/1.json
