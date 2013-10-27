@@ -2,8 +2,8 @@ class Meeting < ActiveRecord::Base
   belongs_to :trip
   belongs_to :friend
 
-  serialize :timeslots, Array
-  serialize :location, Hash
+  serialize :timeslots, Hash
+  serialize :location,  Hash
 
   before_create :generate_random_id
 
