@@ -39,6 +39,9 @@ class MeetingsController < ApplicationController
   end
 
   def meeting_params
-    params.permit(:trip_id, :friend_id, :location, timeslots: [])
+    params.permit(:location, :timeslots).tap do |whitelisted|
+      whitelisted[:location]  = params[:location]
+      whitelisted[:timeslots] = params[:timeslots]
+    end
   end
 end
