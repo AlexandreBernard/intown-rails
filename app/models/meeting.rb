@@ -19,6 +19,6 @@ class Meeting < ActiveRecord::Base
   after_create :send_invite
 
   def send_invite
-    MeetingMailer.invite(self).deliver
+    MeetingMailer.invite(self).deliver unless friend.emails.empty?
   end
 end
