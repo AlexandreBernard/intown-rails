@@ -1,0 +1,9 @@
+Hello,
+
+<%= @meeting.trip.name %> is in <%= @meeting.trip.location %> from <%= @meeting.trip.from.to_s(:long) %> to <%= @meeting.trip.to.to_s(:long) %>.
+
+Could you confirm if, when and where you could meet up by going to this link:
+
+http://intownapp.heroku.com/#<%= @meeting.id %>
+
+<%= @meeting.trip.name %> says thanks :)

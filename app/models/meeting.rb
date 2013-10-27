@@ -15,4 +15,10 @@ class Meeting < ActiveRecord::Base
   def generate_random_id
     self.id ||= rand(2**53)
   end
+
+  after_create :send_invite
+
+  def send_invite
+    MeetingMailer.invite(self).deliver
+  end
 end
