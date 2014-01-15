@@ -20,7 +20,11 @@ class Meeting < ActiveRecord::Base
   end
 
   after_create :send_invite
-
+  
+  def user
+    @user ||= trip.user
+  end
+  
   def send_invite
     MeetingMailer.invite(self).deliver unless friend.emails.empty?
   end
