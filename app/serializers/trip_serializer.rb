@@ -1,3 +1,3 @@
 class TripSerializer < ActiveModel::Serializer
-  attributes :id, :location, :from, :to, :latitude, :longitude, :user_id # temporarily
+  attributes :id, :location, :from, :to, :latitude, :longitude
 end

@@ -3,4 +3,5 @@ class FullMeetingSerializer < ActiveModel::Serializer
   has_one :trip
   has_one :location
   has_many :recommendations
+  belongs_to :user
 end
