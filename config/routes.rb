@@ -1,4 +1,5 @@
 Intown::Application.routes.draw do
+  resources :users
   resources :trips
   resources :meetings
   resources :friends
