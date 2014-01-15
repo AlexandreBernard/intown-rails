@@ -1,9 +1,11 @@
 Intown::Application.routes.draw do
   resources :users
-  resources :trips
+  resources :trips do
+    get :recommendations, on: :member
+  end
   resources :meetings
   resources :friends
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

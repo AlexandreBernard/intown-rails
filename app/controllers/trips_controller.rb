@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  before_action :set_trip, only: [:show, :edit, :update, :destroy]
+  before_action :set_trip, only: [:show, :recommendations, :edit, :update, :destroy]
   respond_to :json
 
   # GET /trips.json
@@ -12,7 +12,12 @@ class TripsController < ApplicationController
   def show
     respond_with(@trip, serializer: FullTripSerializer)
   end
-
+  
+  # GET /trips/1/recommendations.json
+  def recommendations
+    respond_with(@trip.recommendations, each_serializer: LocationSerializer)
+  end
+  
   # POST /trips.json
   def create
     @trip = Trip.new(trip_params)

@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     respond_with(@trip, serializer: UserSerializer)
   end
   
+  private
+  
   def user_params
     params.permit(:name, :email, :password, :password_confirmation)
   end
