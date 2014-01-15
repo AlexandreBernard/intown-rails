@@ -7,6 +7,9 @@ class Meeting < ActiveRecord::Base
 
   accepts_nested_attributes_for :location
   accepts_nested_attributes_for :recommendations
+  
+  validates :trip, presence: true
+  validates :friend, presence: true
 
   serialize :timeslots, Hash
 
